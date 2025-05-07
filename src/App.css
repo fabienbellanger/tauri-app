@@ -1,13 +1,15 @@
-@import "tailwindcss";
-@plugin "daisyui";
+@import 'tailwindcss';
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, night;
+}
 
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 
-  /* Disable the rubberbanding effect on Mac and iOS */
-  overscroll-behavior-y: none;
+    /* Disable the rubberbanding effect on Mac and iOS */
+    overscroll-behavior: none;
 }

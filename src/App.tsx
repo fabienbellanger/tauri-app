@@ -18,30 +18,39 @@ function App() {
     }
 
     return (
-        <main className="flex flex-col justify-center items-center h-screen">
-            <h1 className="mb-8 text-4xl">Welcome to Tauri + React</h1>
+        <div>
+            <section className="navbar bg-base-100 shadow-sm mb-8">
+                <div className="flex-1">
+                    <a className="btn btn-ghost text-xl">Tauri App</a>
+                </div>
+                <div className="flex-none">
+                    <ThemeControler />
+                </div>
+            </section>
+            <main className="flex flex-col justify-center items-center">
+                <h1 className="mb-8 text-4xl">Welcome to Tauri + React</h1>
 
-            <form
-                className="flex flew-row justify-center gap-4 w-screen"
-                onSubmit={async (e) => {
-                    e.preventDefault();
-                    await greet();
-                }}
-            >
-                <input
-                    className="input input-primary"
-                    ref={inputRef}
-                    value={name}
-                    onChange={(e) => setName(e.currentTarget.value)}
-                    placeholder="Enter a name..."
-                />
-                <button className="btn btn-primary" type="submit">
-                    Greet
-                </button>
-            </form>
-            <p className="mt-8">{greetMsg}</p>
-            <ThemeControler />
-        </main>
+                <form
+                    className="flex flew-row justify-center gap-4 w-screen"
+                    onSubmit={async (e) => {
+                        e.preventDefault();
+                        await greet();
+                    }}
+                >
+                    <input
+                        className="input input-primary"
+                        ref={inputRef}
+                        value={name}
+                        onChange={(e) => setName(e.currentTarget.value)}
+                        placeholder="Enter a name..."
+                    />
+                    <button className="btn btn-primary" type="submit">
+                        Greet
+                    </button>
+                </form>
+                <p className="mt-8">{greetMsg}</p>
+            </main>
+        </div>
     );
 }
 

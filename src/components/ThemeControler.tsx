@@ -4,7 +4,7 @@ function ThemeControler() {
     const [currentTheme, setCurrentTheme] = useState<string>('dark');
 
     useEffect(() => {
-        // Récupérer le thème actuel depuis l'attribut data-theme
+        // Get the current heme form data-theme attribute
         const theme = document.documentElement.getAttribute('data-theme');
         setCurrentTheme(theme ?? 'dark');
     }, []);

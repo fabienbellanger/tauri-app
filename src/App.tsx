@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler, FormEvent, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useRef, useState } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import './App.css';
 import ThemeControler from './components/ThemeControler';
@@ -18,7 +18,7 @@ function App() {
     }
 
     async function submit(e: FormEvent) {
-        e.preventDefault()
+        e.preventDefault();
         try {
             await greet();
         } catch (e) {
@@ -27,9 +27,9 @@ function App() {
     }
 
     const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setName(e.currentTarget.value)
-    }
-    
+        setName(e.currentTarget.value);
+    };
+
     return (
         <div>
             <section className="navbar bg-base-100 shadow-sm mb-8">

@@ -32,7 +32,7 @@ function App() {
 
     return (
         <div>
-            <section className="navbar bg-base-100 shadow-sm mb-8">
+            <section className="navbar bg-base-200 shadow-sm mb-8">
                 <div className="flex-1">
                     <a className="btn btn-ghost text-xl">Tauri App</a>
                 </div>

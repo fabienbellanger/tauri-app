@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 function ThemeControler() {
-    const [currentTheme, setCurrentTheme] = useState<string>('dark');
+    const [currentTheme, setCurrentTheme] = useState<string>('dim');
 
     useEffect(() => {
         // Get the current heme form data-theme attribute
         const theme = document.documentElement.getAttribute('data-theme');
-        setCurrentTheme(theme ?? 'dark');
+        setCurrentTheme(theme ?? 'dim');
     }, []);
 
     return (
@@ -15,10 +15,10 @@ function ThemeControler() {
                 {/* this hidden checkbox controls the state */}
                 <input
                     type="checkbox"
-                    checked={currentTheme === 'dark'}
+                    checked={currentTheme === 'dim'}
                     className="theme-controller"
                     onChange={(e) => {
-                        const newTheme = e.target.checked ? 'dark' : 'light';
+                        const newTheme = e.target.checked ? 'dim' : 'light';
                         document.documentElement.setAttribute(
                             'data-theme',
                             newTheme
